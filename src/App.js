@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   NavLink,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 import SingleUserPage from "./pages/SingleUserPage";
 import UsersPage from "./pages/UsersPage";
@@ -15,13 +15,13 @@ export default function App() {
         <header>
           <h1> Routing & Fetching </h1>
           <nav>
-            <NavLink to="/">Home</NavLink>
             <NavLink to="/users">Users</NavLink>
+            <NavLink to="/">Home</NavLink>
           </nav>
         </header>
         <main>
           <Switch>
-            <Route path="/users/x?">
+            <Route path="/users/:userID">
               <SingleUserPage />
             </Route>
             <Route path="/users">
